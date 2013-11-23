@@ -15,7 +15,7 @@ public class RenderYeti extends RenderBiped {
 
     public RenderYeti()
     {
-         super(new ModelBiped(0.0F), 0.3F);
+         super(new ModelYeti(), 0.3F);
     }
 
     protected ResourceLocation getEntityTexture(Entity par1Entity)
