@@ -33,6 +33,8 @@ import net.minecraft.village.MerchantRecipe;
 import net.minecraft.village.MerchantRecipeList;
 import net.minecraft.world.World;
 
+import net.minecraft.entity.monster.EntityIronGolem;
+
 import net.minecraft.entity.monster.IMob;
 
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -40,7 +42,7 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class EntityGigantopithecus extends EntityAnimal {
+public class EntityGigantopithecus extends EntityIronGolem {
 	
 	  boolean spawn;
 	  Random random = new Random();
@@ -48,6 +50,7 @@ public class EntityGigantopithecus extends EntityAnimal {
 	 public EntityGigantopithecus(World par1World) 
 	 {
 		  super(par1World);
+		/*
 		  this.setSize(6.4F, 6.9F);
 	//	this.yOffset *= 6.0F;
 		  //this.moveSpeed = 0.30F;
@@ -70,8 +73,9 @@ public class EntityGigantopithecus extends EntityAnimal {
 		  this.tasks.addTask(4, new EntityAIWatchClosest(this, EntityLiving.class, 8.0F));
 		
 		this.targetTasks.addTask(1, new EntityAINearestAttackableTarget(this, EntityLiving.class, 0, false, true, IMob.mobSelector));
+	*/
 	 }
-	 
+	 /*
 	private boolean isPlaying;
 
 	//public int getMaxHealth() 
@@ -146,4 +150,5 @@ public class EntityGigantopithecus extends EntityAnimal {
 	{
 		return null;
 	}
+	*/
 }

@@ -6,14 +6,27 @@ import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;
 import org.lwjgl.opengl.GL11;
 
+import net.minecraft.client.model.ModelRenderer;
+
 import net.minecraft.client.model.ModelBiped;
+import net.minecraft.client.model.ModelIronGolem;
 
 @SideOnly(Side.CLIENT)
-public class ModelYeti extends ModelBiped
+public class ModelYeti extends ModelIronGolem
 {
     public ModelYeti()
     {
-        super(0.0F);
+        super();
+        short short1 = 128;
+        short short2 = 128;
+
+        float par1 = 0.0F;
+        float par2 = -7.0F;
+
+        this.ironGolemHead = (new ModelRenderer(this)).setTextureSize(short1, short2);
+        this.ironGolemHead.setRotationPoint(0.0F, 0.0F + par2, -2.0F);
+        this.ironGolemHead.setTextureOffset(0, 0).addBox(-4.0F, -12.0F, -5.5F, 8, 10, 8, par1);
+        //this.ironGolemHead.setTextureOffset(24, 0).addBox(-1.0F, -5.0F, -7.5F, 2, 4, 2, par1);
     }
 
     /**
@@ -42,7 +55,7 @@ public class ModelYeti extends ModelBiped
             GL11.glPopMatrix();
     }
 */
-
+/*
     public void render(Entity par1Entity, float par2, float par3, float par4, float par5, float par6, float par7)
     {
         this.setRotationAngles(par2, par3, par4, par5, par6, par7, par1Entity);
@@ -61,5 +74,5 @@ public class ModelYeti extends ModelBiped
             this.bipedHeadwear.render(par7);
             GL11.glPopMatrix();
     }
-
+*/
 }
